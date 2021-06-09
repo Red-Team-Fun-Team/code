@@ -26,31 +26,32 @@ def menu():
 # Get network to enumerate hosts on
 def enumeration():
     network = input("\nNetwork to scan (ex: 10.0.0.0/24): ")
-    command = "nmap -sn"
-    run_command(command, network)
+    command = f"nmap -sn {network}"
+    run_command(command)
 
 # Run the Nmap scan 
-def run_command(command, target):
+def run_command(command):
     # Give the user the option to save output to a text file
     make_file = input("Output to text file (y/n)? ")
     if make_file == 'y':
         filepath = input("File path for text file: ")
-        os.system(f"{command} {target} > {filepath}")
+        os.system(f"{command} > {filepath}")
     else:
-        os.system(f"{command} {target}")
+        os.system(f"{command}")
 
 # Get host to run a comprehensive Nmap scan on
 def scan_host():
     host = input("\nHost to scan (ex: 10.0.0.5): ")
-    command = "nmap -sV -sC"
-    run_command(command, host)
+    command = f"nmap -sV -sC {host}"
+    run_command(command)
 
 # Get host, protocol, and username to run a brute force attack on
 def brute_force():
     host = input("\nHost to attack: ")
     protocol = input("Protocol (ex: rdp): ")
     username = input("Username: ")
-    os.system(f"hydra -V -f -l {username} -P /usr/share/wordlists/rockyou.txt {protocol}://{host} -t 4")
+    command = f"hydra -V -f -l {username} -P /usr/share/wordlists/rockyou.txt {protocol}://{host} -t 4"
+    run_command(command)
     
 
 # Main
