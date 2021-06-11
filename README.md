@@ -18,3 +18,6 @@ Resources:
 - [Writing or Receiving Your First Pentest Report](https://blog.zsec.uk/ltr101-pentest-reporting/)
 - [Template OSCP Penetration Test Report](https://www.offensive-security.com/pwk-online/PWKv1-REPORT.doc)
 - [Example OSCP Penetration Test Report](https://www.offensive-security.com/reports/sample-penetration-testing-report.pdf)
+
+Group Documentation:
+[Group Google Drive](https://drive.google.com/drive/folders/1fQSXteqJFXGVJwyDg2oAXKKDgtSzpxNw?usp=sharing)
